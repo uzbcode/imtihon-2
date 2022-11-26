@@ -166,9 +166,9 @@ img {
   border: 0;
 }
 
-/* ----------------------- */
+
 /* Navmenu */
-/* ----------------------- */
+
 
 
 .nav {
@@ -252,9 +252,9 @@ img {
   }
 }
 
-/* ----------------------- */
+
 /* Hero */
-/* ----------------------- */
+
 .hero {
   background: url('../assets/images/home-hero-desktop.jpg') no-repeat
     center/cover;
@@ -389,6 +389,85 @@ img {
 
   .header--home__content .header--home__btn {
     margin-left: 0;
+  }
+}
+ /* Steps */
+  
+ .steps .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 3rem;
+}
+
+.steps .step__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  max-width: 57.3rem;
+  text-align: left;
+  position: relative;
+}
+
+.steps .step__card::before {
+  content: '';
+  display: block;
+  width: 100rem;
+  background-color: #e5ecf4;
+  position: absolute;
+  top: 4rem;
+  left: -95rem;
+  height: 1rem;
+  z-index: -1;
+}
+
+.steps .step__card h4 {
+  margin: 4rem 0 2.7rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .steps .container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .steps .step__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+    max-width: 100%;
+    align-items: center;
+    text-align: left;
+    position: relative;
+  }
+
+  .steps .step__card::before {
+    content: '';
+    width: 1.4rem;
+    height: 22rem;
+    background-color: #e5ecf4;
+    top: -14rem;
+    left: 4rem;
+    z-index: -1;
+  }
+
+  .steps .step__card h4 {
+    margin: 4rem 0 2.7rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .steps .step__card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .steps .step__card::before {
+    content: '';
+    display: none;
   }
 }
 
