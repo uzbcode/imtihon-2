@@ -255,4 +255,140 @@ img {
 /* ----------------------- */
 /* Hero */
 /* ----------------------- */
+.hero {
+  background: url('../assets/images/home-hero-desktop.jpg') no-repeat
+    center/cover;
+  padding-block: 15rem;
+  position: relative;
+}
+
+.hero::after {
+  content: url('../assets/patterns/white-circles.svg');
+  position: absolute;
+  right: -4.8rem;
+  bottom: 16.4rem;
+}
+
+.header--home__content {
+  text-align: left;
+  max-width: 50rem;
+  margin-left: 0;
+  position: relative;
+}
+
+.header--home__content::before {
+  content: url('../assets/patterns/line.svg');
+  position: absolute;
+  right: 114%;
+  bottom: 13.5rem;
+}
+
+.header--home__content::after {
+  content: url('../assets/patterns/right-arrow.svg');
+  position: absolute;
+  right: -100%;
+  bottom: 0;
+}
+
+.header--home__content h1 {
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
+.header--home__content p {
+  color: #fff;
+  margin-left: 5.7rem;
+  margin-bottom: 4rem;
+}
+
+.header--home__content .header--home__btn {
+  margin-left: 5.7rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    background: url('../assets/images/home-hero-tablet.jpg') no-repeat
+      center/cover;
+    padding-block: 15rem;
+    position: relative;
+  }
+
+  .hero::after {
+    right: -4.8rem;
+    bottom: 4rem;
+  }
+
+  .header--home__content {
+    text-align: center;
+    max-width: 100%;
+    width: 60rem;
+    margin: auto;
+  }
+
+  .header--home__content::before {
+    content: '';
+  }
+
+  .header--home__content::after {
+    left: -225%;
+    bottom: -12rem;
+  }
+
+  .header--home__content h1 {
+    color: #fff;
+    margin-bottom: 4rem;
+  }
+
+  .header--home__content p {
+    color: #fff;
+    margin-left: 5.7rem;
+    margin-bottom: 4rem;
+  }
+
+  .header--home__content .header--home__btn {
+    margin-left: 5.7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background: url('../assets/images/home-hero-mobile.jpg') no-repeat
+      center/cover;
+    padding-block: 15rem;
+    position: relative;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .header--home__content {
+    text-align: center;
+    max-width: 100%;
+    width: 60rem;
+    margin: auto;
+  }
+
+  .header--home__content::before {
+    content: '';
+  }
+
+  .header--home__content::after {
+    left: -250%;
+    bottom: -12rem;
+  }
+
+  .header--home__content h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  .header--home__content p {
+    margin-left: 0;
+  }
+
+  .header--home__content .header--home__btn {
+    margin-left: 0;
+  }
+}
 
