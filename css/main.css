@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --yellow: #fcb72b;
+  --dark-navy: #495567;
+  --dim-grey: #939caa;
+  --light-grey: #e5ecf4;
+  --snow: #f2f5f9;
+  --light-yellow: #fff4df;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  overflow-x: hidden;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Space Mono', monospace;
+  color: var(--dark-navy);
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+  letter-spacing: -2.5px;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 4.8rem;
+  letter-spacing: -2.14px;
+}
+
+h3 {
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: -1.79px;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: -1.07px;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: var(--dim-grey);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dim-grey);
+}
+
+section {
+  padding-top: 12rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-inline: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: 'Space Mono', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: center;
+  background-color: var(--yellow);
+  color: #fff;
+  border: 1px solid transparent;
+  padding: 1rem 4rem;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  border-color: var(--yellow);
+  background-color: transparent;
+  color: var(--yellow);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.btn-outline:hover {
+  background-color: var(--yellow);
+  color: #fff;
+}
+
+.link {
+  color: #929baa;
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.link:hover,
+.link:active,
+.link:focus {
+  color: #fcb72c;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ----------------------- */
+/* Navmenu */
+/* ----------------------- */
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding-block: 7.5rem;
+  position: relative;
+}
+
+.nav__logo {
+  background: url('../assets/logo.svg') no-repeat center/contain;
+  display: inline-block;
+  width: 7.5rem;
+  height: 2rem;
+  margin: 0 auto;
+}
+
+.nav__links--active {
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+}
+
+.nav__hamburger {
+  background: url('../assets/icons/hamburger.svg') no-repeat center/cover;
+  width: 2rem;
+  height: 1.6rem;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__hamburger:focus {
+  outline: 3px dashed var(--yellow);
+}
+
+.nav__hamburger--active {
+  background: url('../assets/icons/close.svg') no-repeat center/cover;
+}
+
+.nav__links {
+  display: none;
+}
+
+.nav__btn {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .nav__hamburger {
+    display: none;
+  }
+
+  .nav__logo {
+    width: 10rem;
+    height: 3rem;
+    margin: 0;
+  }
+
+  .nav__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4rem;
+  }
+
+  .nav__links li:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  .nav__btn {
+    display: inline-block;
+    margin-left: auto;
+  }
+
+  .nav__links--mobile {
+    display: none;
+  }
+}
+
+/* ----------------------- */
+/* Hero */
+/* ----------------------- */
+
